@@ -1,0 +1,17 @@
+const prompt = require('prompt-sync')();
+
+function onPalindromi(sana) {
+    let kaannetty = sana.split('').reverse().join('');
+    if (sana === kaannetty) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+let sana = prompt("Anna sana: ");
+if (onPalindromi(sana)) {
+    console.log(sana + " on palindromi.");
+} else {
+    console.log(sana + " ei ole palindromi.");
+}
